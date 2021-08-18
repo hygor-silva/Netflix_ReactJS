@@ -4,6 +4,10 @@ import './FeaturedMovie.css';
 export default ({item}) => {
 
     let firstDate = new Date(item.first_air_date);
+    let genres = [];
+    for (let i in item.genres){
+        genres.push(item.genres[i].name);
+    }
 
     return (
         <section className= "featured" style={{
@@ -24,10 +28,11 @@ export default ({item}) => {
                         {item.overview}
                     </div>
                     <div className= "featured--buttons">
-
+                        <a href={`/watch/${item.id}`} className= "featured--watchbutton">▶ Assistir</a>
+                        <a href={`/list/add/${item.id}`} className= "featured--mylistbutton">+ Minha Lista</a>
                     </div>
                     <div className= "featured--genres">
-                        <strong>Gêneros: </strong> ...
+                        <strong>Gêneros: </strong> {genres.join(', ')}
                     </div>
                 </div>
             </div>
