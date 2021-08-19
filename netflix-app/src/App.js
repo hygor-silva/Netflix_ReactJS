@@ -62,7 +62,7 @@ export default () => {
       </section>
 
       <footer>
-        Feito com <span role= "img" aria-label= "coração">❤️</span> <br/>
+        Feito por Hygor Silva <span role= "img" aria-label= ""></span> <br/>
         Direitos de imagem para Netflix<br/>
         Dados pegos do site Themoviedb.org
 
